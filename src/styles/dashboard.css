@@ -1,0 +1,188 @@
+.dashboard {
+  position: relative;
+}
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.dashboard-create {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid #eee;
+
+  & h3 {
+    margin: 0;
+  }
+}
+.dashboard-Create-button {
+  height: 35px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/*! dashboard main  */
+.dashboard-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* width: 100%; */
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.emptyList {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #ccc;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  width: 70%;
+  height: 50vh;
+}
+
+/*! templete  List todo  */
+.list-todo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px dashed#ccc;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.template-list-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*! #################Card ############# */
+/*! ##################Card  #############*/
+.card-todo {
+  border: 1px solid #eee;
+  box-shadow: 1px 1px 2px #0005;
+  padding: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s;
+}
+.card-todo:hover {
+  border: 1px solid #ccc;
+}
+/* top  */
+.card-todo-top {
+  display: flex;
+  justify-content: space-between;
+}
+.trash-button {
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  cursor: pointer;
+  & .trash {
+    color: #999;
+  }
+}
+.trash-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 0, 0, 0.136);
+  border: 1px solid rgba(187, 0, 0, 0.582);
+  .trash {
+    color: rgba(187, 0, 0, 0.582);
+  }
+}
+
+.card-todo-top .card-todo-headings {
+  & h3,
+  h4 {
+    margin: 0;
+    text-transform: capitalize;
+  }
+  & h4 {
+    color: #999;
+    font-weight: 500;
+  }
+}
+/* main  */
+.card-todo-main {
+  position: relative;
+}
+.card-todo-main .card-todo-main-headings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  & h4,
+  p {
+    margin: 0;
+  }
+}
+.card-todo-main .card-todo-progress-bar {
+  position: relative;
+  min-height: 20px;
+}
+.card-todo-main .card-todo-progress-bar .empty-bar,
+.card-todo-main .card-todo-progress-bar .fill-bar {
+  display: inline-block;
+  height: 5px;
+  border-radius: 25px;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+}
+.card-todo-main .card-todo-progress-bar .fill-bar {
+  background-color: orange;
+}
+/* bottom  */
+.card-todo-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.card-todo-bottom .card-todo-deadline {
+  background-color: #eee;
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-todo-bottom .card-todo-info {
+  display: flex;
+  gap: 1rem;
+}
+
+/* !  toast  */
+/* !  toast  */
+.toast {
+  position: fixed;
+  top :1rem;
+  left: 1rem;
+  background-color: rgb(138, 230, 0);
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 20px;
+  transition: .5s;
+  border-radius: 5px;
+  border-bottom-left-radius: 0;
+}

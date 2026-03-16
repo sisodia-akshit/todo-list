@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/Mulish-Variable_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
